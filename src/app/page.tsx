@@ -210,11 +210,11 @@ export default function Page() {
                   디스코드로 직접 메시지
                 </Link>{""}를 보내주시거나,
                 {" "}
-                <Link
-                  href={`mailto:${DATA.contact.email}`}
+                <a
+                  href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(DATA.contact.email)}&su=${encodeURIComponent("문의드립니다")}`}
                   className="text-blue-500 hover:underline">
                   이메일로 연락
-                </Link>{""}을 보내주세요. <br />
+                </a>{""}을 보내주세요. <br />
                 {""}
                 최대한 빨리 답장드릴게요.
               </p>
