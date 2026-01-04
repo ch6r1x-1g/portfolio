@@ -1,10 +1,7 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { getBlogPosts } from "@/data/blog";
-import { DATA } from "@/data/resume";
-import { formatDate } from "@/lib/utils";
-import Link from "next/link";
+import TagFilter from "@/components/blog/tag-filter";
 
 export const metadata = {
   title: "블로그",
@@ -37,68 +34,7 @@ export default async function BlogPage() {
           </div>
         </BlurFade>
         <div className="max-w-[800px] mx-auto">
-          <ul className="divide-y divide-dashed border-y">
-            {posts
-              .sort((a, b) => {
-                if (
-                  new Date(a.metadata.publishedAt) >
-                  new Date(b.metadata.publishedAt)
-                ) {
-                  return -1;
-                }
-                return 1;
-              })
-              .map((post, id) => (
-                <BlurFade
-                  delay={BLUR_FADE_DELAY * 2 + id * 0.05}
-                  key={post.slug}
-                >
-                  <li className="py-4">
-                    <Link
-                      className="block cursor-pointer"
-                      href={`/blog/${post.slug}`}
-                    >
-                      <div className="flex items-start justify-between gap-x-2">
-                        <p className="font-semibold tracking-tight flex items-center gap-2">
-                          {(
-                            Array.isArray((post.metadata as any).tags)
-                              ? (post.metadata as any).tags[0]
-                              : (post.metadata as any).tag
-                          ) && (
-                              <span className="inline-block rounded-lg bg-foreground text-background px-2 py-0.5 text-[10px]">
-                                {
-                                  Array.isArray((post.metadata as any).tags)
-                                    ? (post.metadata as any).tags[0]
-                                    : (post.metadata as any).tag
-                                }
-                              </span>
-                            )}
-                          {post.metadata.title}
-                        </p>
-                        <time className="text-xs sm:text-sm tabular-nums text-muted-foreground">
-                          {formatDate(post.metadata.publishedAt)}
-                        </time>
-                      </div>
-                      <div className="mt-1 flex items-center gap-2">
-                        <Avatar className="size-5 border">
-                          <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
-                          <AvatarFallback>{DATA.initials}</AvatarFallback>
-                        </Avatar>
-                        <span className="text-xs text-muted-foreground">
-                          {DATA.name}
-                        </span>
-                        <span>·</span>
-                        {post.metadata.summary && (
-                          <p className="text-xs text-muted-foreground">
-                            {post.metadata.summary}
-                          </p>
-                        )}
-                      </div>
-                    </Link>
-                  </li>
-                </BlurFade>
-              ))}
-          </ul>
+          <TagFilter posts={posts} />
         </div>
       </div>
     </section>
