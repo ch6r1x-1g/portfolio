@@ -11,7 +11,7 @@ export const DATA = {
     "더 나은 세상의 디자인을 위해 노력하는 디자이너가 꿈인 사람이에요! 저는 디스코드에서 주로 활동합니다!",
   summary:
     "디자인을 공부하고 배운지는 아직 1년 정도이지만, 디스코드 서버의 로고들을 만들어주며 성장중입니다. 지금 저작권 전권을 가지고 있는 서버는 [Free Server Korea](https://discord.com/servers/free-server-korea-958869586479038474) 하나뿐이지만, 성장하는 모습으로 더 나아갈 예정입니다.",
-  avatarUrl: "/me.png",
+  avatarUrl: "/me.jpg",
   skills: [
     "Figma",
     "HTML",
@@ -20,6 +20,7 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
+    { href: "/hackathons", icon: Icons.palette, label: "Design logs" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
@@ -33,25 +34,12 @@ export const DATA = {
 
         navbar: true,
       },
-      LinkedIn: {
-        name: "LinkedIn",
-        url: "https://www.linkedin.com/in/r6hex1in",
-        icon: Icons.linkedin,
-
-        navbar: false,
-      },
       Discord: {
         name: "Discord",
         url: "https://discord.gg/DZPxzrG5",
         icon: Icons.discord,
 
         navbar: true,
-      },
-      Youtube: {
-        name: "Youtube",
-        url: "https://dub.sh/dillion-youtube",
-        icon: Icons.youtube,
-        navbar: false,
       },
       email: {
         name: "Send Email",
