@@ -159,8 +159,25 @@ export const DATA = {
       ],
     },
     {
+      title: "HAMZZY",
+      dates: "2025년 11월 1일 - 2026년 1월 13일",
+      location: "Game Clan (PUBG)",
+      description:
+        "해당 클랜의 로고 이미지와, 서버 아이콘과 배너 이미지를 제작한 바 있습니다.",
+      image:
+        "/HAMZZY.png",
+      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
+      links: [
+        {
+          title: "Figma",
+          icon: <Icons.figma className="h-3 w-3" />,
+          href: "https://www.figma.com/design/KCzHDBdpBfelgr1B02ERtq/HAMZZY?node-id=0-1&t=MkDOjSABJqKgh9ud-1",
+        },
+      ],
+    },
+    {
       title: "Bellus",
-      dates: "2025년 2월 6일 - 2026년 1월 23일",
+      dates: "2025년 2월 6일 - 2025년 11월 1일",
       location: "Game Clan (PUBG)",
       description:
         "해당 클랜의 로고 이미지와, 디스코드 아이콘 팩, 서버 아이콘과 배너 이미지를 제작한 바 있습니다.",
